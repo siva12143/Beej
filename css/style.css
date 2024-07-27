@@ -1,0 +1,995 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:  none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.bodyContainer{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.header_inner{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    padding: 10px 20px;
+    align-items: center;
+    width: 1440px;
+    margin: 0 auto;
+    /* backdrop-filter: blur(10px); */
+}
+header .logo{
+    padding: 10px;
+}
+header .logo img{
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 20px;
+    flex-wrap: wrap;
+}
+header li a{
+    color:#DFD8BE;
+}
+header .menu_options{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+header .menu_options span{
+    color:#DFD8BE;
+
+}
+header .menu_options span:nth-last-child(1){
+    margin-left: 10px;
+    display: inline-block;
+}
+.banner_container{
+    background-image: url(../images/Layer\ 127.png);
+    height: 800px;
+    width: 100%;
+    /* background-position: center top */
+    background-size: cover;
+    
+    background-origin: border-box;
+    display: flex;
+    /* justify-content: center; */
+    padding:250px 0 0 200px;
+}
+.banner_container h1{
+    font-size: 45px;
+    font-weight: 500;
+    color: #C8C5C6;
+}
+.banner_container h1 span{
+    display: block;
+}
+
+/* shop */
+.shop,.earth,.mindful,.living,.fashion,.community{
+    padding: 50px ;
+    background-color: #dcd8cb;
+    overflow: hidden;
+}
+
+.shop_header,.earth_header,.fashion_header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    padding: 0 50px;
+}
+.shop_header .container_title,.earth_header .container_title,.fashion_header .container_title{
+    width: 60%;
+}
+.shop_header .container_header_btn,.earth_header .container_header_btn,.fashion_header .container_header_btn{
+    width: 40%;
+}
+.container_header_btn{
+    text-align: end;
+    padding: 20px;
+}
+.container_header_btn a{
+    padding: 10px 25px;
+    background-color: #fff;
+    color: #000;
+    transition: .5s;
+}
+.container_header_btn a:hover {
+    background: #BAA89A;
+}
+.container_title{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    position: relative;
+}
+.container_title::before{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 3px;
+    background-color: #fff;
+    left: -100px;
+    top: 30px;
+}
+.shop{
+    position: relative;
+}
+.shop::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: #ECE9E2;
+    bottom: 0;
+    left: 0;
+}
+.shop_images{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    position: relative;
+}
+.shop_img{
+    overflow: hidden;
+}
+.shop_img:hover img{
+    transform: scale(1.15);
+}
+.shop_img img{
+    width: 100%;
+    transition: .5s;
+}
+/* earth     */
+.earth{
+    background-color: #ECE9E2;
+    /* padding-top: 200px; */
+}
+.earth_header .container_title{
+    color: #BAA89A;
+}
+.earth_cards{
+    padding: 100px 0 50px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    width: 100%;
+}
+.earth_cards_inner{}
+.earth_card{
+    padding:10px;
+}
+
+.earth_card_inner{
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.earth_card_left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+}
+
+.earth_img1{
+    width: 80%;
+    transition: .5s;
+    padding: 20px;
+}
+.earth_img1 img{
+    width: 100%;
+}
+.earth_img2{
+    width: 50%;
+    padding: 20px;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}
+.earth_card2 .earth_img2{
+    width: 60%;
+    padding: 20px;
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+}
+.earth_img2 img{
+    width: 100%;
+}
+.earth_card_right{
+    padding-left: 20px;
+}
+.earth_card_right .earth_card_title{
+    margin-bottom: 10px;
+}
+.earth_card_right p{
+    line-height: 28px;
+    font-size: 16px;
+}
+.earth_card_btn{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-bottom: 2px solid #C4B6AC;
+    color: #C4B6AC;
+    background-color: #ECE9E2;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+.earth_card_btn::before{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    /* background-color: #C4B6AC; */
+    border: 3px solid #C4B6AC;
+    border-right: 0;
+    left: -105%;
+    z-index: 0;
+    top: 0;
+    transition: .5s;
+}
+.earth_card_btn::after{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    /* background-color: #C4B6AC; */
+    border-right: 3px solid #C4B6AC;
+    right: -105%;
+    z-index: 0;
+    top: 0;
+    transition: .5s;
+}
+.earth_card_btn:hover::before{
+    left: 0;
+}
+.earth_card_btn:hover::after{
+    right: 0;
+}
+.earth_slider_icon_inner, .mindful_slider_icon_inner{
+    display: flex;
+    padding-right: 50px;
+    gap: 20px;
+    width: 100%;
+    justify-content: end;
+}
+.earth_slider_icon i, .mindful_slider_icon i{
+    font-size: 20px;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 30px;
+}
+/* clients */
+.clients{
+    display: grid;
+    grid-template-columns: repeat(5,150px);
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    background-color: #F2F0EC;
+    padding: 30px 50px;
+}
+.client{
+    width: 100px;
+}
+.client img{
+    width: 100%;
+    background-color: transparent;
+}
+/* mindful */
+.mindful_container{
+    padding: 0 50px;
+}
+.mindful_header .container_title{
+    width: 90%;
+}
+.mindful_heading {
+    padding: 20px 0;
+    width: 85%;
+}
+.mindful_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.mindful_card{
+    padding: 20px 0;
+}
+.mindful_card1 h2{
+    color: #C6C6AC;
+}
+.mindful_card2 h2{
+    color: #D0B9A3;
+}
+.mindful_card3 h2{
+    color: #9292AB;
+}
+.mindful_card p{
+    padding: 10px 0;
+    line-height: 28px;
+}
+.mindful_card .mindful_btn{
+    padding-top: 10px;
+} 
+.mindful_card .mindful_btn a{
+    padding: 7px 10px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+}
+.mindful_card .mindful_btn a::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    left: 0;
+    top: 27px;
+    transition: .5s;
+}
+.mindful_card .mindful_btn a:hover::before{
+    top: 0;
+}
+.mindful_heading p{
+    font-size: 18px;
+}
+.mindful_btn {
+    padding-left: 15px;
+    position: relative;
+}
+.mindful_btn img{
+    position: absolute;
+    left: -5px;
+    width: 40px;
+    height: 40px;
+}
+.mindful_slider_icons{
+    margin-top: 30px;
+}
+/* living */
+.living_container{
+    padding: 50px;
+    padding-bottom: 0;
+}
+.living_cards{
+    margin-top: 50px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 400px);
+}
+.living_card{
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.living_card > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: .5s;
+}
+.living_card:hover > img{
+    transform: scale(1.1);
+}
+.living_card3{
+    grid-column: 1/3;
+}
+.living_card h2{
+    font-size: 30px;
+    color: #262527;
+    /* position: relative; */
+    width: 60%;
+    z-index: 2;
+}
+.living_card p{
+    margin-top: 10px;
+    color: #38393a;
+    width: 60%; 
+    overflow: hidden;
+    padding: 10px;
+    transition: .5s;
+}
+.living_card span{
+    position: relative;
+    top: -100px;
+    transition: .5s;
+}
+.living_card:hover span{
+    top: 0px;
+}
+.living_card3 h2,.living_card3 p{
+    width: 30%;
+}
+/* .living_card > div{
+    position: relative;
+} */
+ .living_card_inner h2{
+    position: relative;
+ }
+.living_add_icon{
+    position: absolute;
+    color: #fff;
+    right: 30px;
+    bottom: 20px;
+    z-index: 10;
+}
+.living_add_icon i{
+    font-size: 40px;
+    font-weight: 400;
+}
+/* fashion */
+.fashion_cards{
+    margin-top: 30px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 350px;
+    padding: 0 50px 30px 50px;
+}
+.fashion_card{
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.fashion_card img{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.fashion_card:hover img{
+    border-radius: 20px;
+}
+.fashion_card:hover img{
+
+}
+.fashion_card1{
+    /* background-image: url(../images/Vector.png); */
+}
+.fashion_card2{
+    /* background-image: url(../images/Vector\ Image.png); */
+}
+.fashion_desc{
+    position: absolute;
+    width: 80%;
+    background-color: #e6e4de;
+    padding: 10px 20px;
+    left: 10%;
+    bottom: -10px;
+    display: flex;
+    gap: 20px;
+}
+.fashion_desc p{
+    width: 90%;
+    font-size: 20px;
+}
+.fashion_add_icon{
+    color: #fff;
+    right: 30px;
+    bottom: 20px;
+}
+.fashion_add_icon i{
+    font-size: 40px;
+    font-weight: 400;
+}
+.community{
+    background-color: #CAC5B6;
+    position: relative;
+}
+.community::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    background-image: url(../images/Vector\ Smart\ Object\ copy.png);
+    left: 0px;
+    top: 20px;
+}
+.community::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    background-image: url(../images/Group\ 14.png);
+    background-size: cover;
+    right: 0px;
+    bottom: 0px;
+}
+.community_container{
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+.community_email_container{
+    display: flex;
+    justify-content: end;
+    padding: 3px;
+    padding-left: 10px;
+    background-color: #A8A290;
+    width: 80%;
+}
+.community_email_container input{
+    background-color: transparent;
+    font-size: 20px;
+    width: 75%;
+    border: none;
+    outline: none;
+}
+.community_email_container button{
+    width: 20%;
+    padding: 8px;
+    background-color: #64574F;
+    color: #fff;
+    border: none;
+}
+.community_content h1{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.community_content p{
+    line-height: 26px;
+}
+/* footer */
+footer{
+    padding: 50px;
+    background-color: #64574F;
+    min-height: 250px;
+    position: relative;
+    padding-bottom: 0;
+}
+footer:before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    background-size: cover;
+    height: 120px;
+    background-image: url(../images/Vector\ Smart\ Object-1.png);
+    left: 0;
+    top: 60px;
+}
+footer:after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    background-size: cover;
+    height: 180px;
+    background-image: url(../images/Vector\ Smart\ Object-2.png);
+    right: 0;
+    bottom: 10px;
+}
+.footer_container1{
+    padding: 0 80px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.footer_menu1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+.footer_menu1 h3,.need_help h3,.social h3{
+    width: 100%;
+    color: #DFD8BE;
+}
+.navigate li a{
+    color: #DFD8BE;
+}
+.footer_parent_menu{
+    padding:5px 0 0 5px ;
+}
+.footer_parent_menu h3{
+    cursor: pointer;
+    color: #dfd8be80;
+}
+#navSustainablity{
+    color: #dfd8be;
+}
+.footer_parent_menu > li{
+    margin: 10px 0;
+}
+.footer_parent_menu li a{
+    color: #dfd8be80;
+}
+.footer_sub_menu{
+    padding-left: 5px;
+    display: none;
+}
+.footer_sub_menu.active{
+    display: block;
+}
+.footer_sub_menu li{
+    margin: 5px 0;
+}
+.footer_sub_menu li a{
+    color: #dfd8be80;
+}
+.footer_sub_menu li a:hover{
+    color: #dfd8be;
+}
+.social_icons{
+    padding: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+.social_icons span i{
+    font-size: 20px;
+    padding: 6px 8px;
+    border: 1px solid #dfd8be;
+    border-radius: 37% 63% 54% 46% / 39% 46% 54% 61% ;
+    color: #dfd8be;
+}
+.social_icons span:nth-child(1) i{
+    padding: 6px 12px;
+}
+.footer_container2{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+}
+.footer_container2 p{
+    color: #dcd8cb;
+}
+@media only screen and (max-width:1024px){
+    .bodyContainer{
+        width: 100%;
+    }
+    .header_inner{
+        width: 100%;
+    }
+    .banner_container{
+        height: 600px;
+        padding: 180px 0 0 150px;
+    }
+    .shop_header .container_title, .earth_header .container_title, .fashion_header .container_title{
+        width: 70%;
+    }
+    .shop_header .container_header_btn, .earth_header .container_header_btn, .fashion_header .container_header_btn{
+        width: 30%;
+    }
+    .container_title{
+        font-size: 40px;
+    }
+    .earth_card_inner{
+        align-items: center;
+    }
+    .earth_img1{
+        padding: 0;
+    }
+    .earth_img2{
+        padding: 10px;
+        right: 0;
+        bottom: -15px;
+    }
+    .earth_card2 .earth_img2{
+        padding: 10px;
+        right: -10px;
+        bottom: -15px;
+    }
+    .earth_card_right p{
+        line-height: 24px;
+    }
+    .mindful_container{
+        padding: 0;
+    }
+    .living_cards{
+        grid-template-rows: repeat(2, 300px);
+    }
+    .footer_container1{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        row-gap: 20px;
+    }
+    .navigate{
+        grid-column: 1/4;
+    }
+    .footer_menu1{
+        width: 80%;
+        padding-right: 0;
+    } 
+
+}
+@media only screen and (max-width:992px){
+    .bodyContainer{
+        width: 100%;
+        overflow: hidden;
+    }
+    .header_inner{
+        width: 100%;
+        left: 5%;
+        display: flex;
+        padding: 10px 30px;
+        justify-content: space-between;
+    }
+    .banner_container{
+        height: 550px;
+    }
+    header nav{
+        position: absolute  ;
+        top: 100px;
+        padding: 20px;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        color: #dcd8cb;
+        background-color: #000;
+        transition: .5s;
+    }
+    header nav.active{
+        right: 0px;
+    }
+    header nav ul{
+        flex-direction: column;
+    }
+    header nav li {
+        /* text-align: end; */
+    }
+    header nav li a{
+        color: #dcd8cb;
+    }
+    header .menu_options{
+        width: 100px;
+        /* padding: 0 50px; */
+    }
+    header .logo{
+        width: 100px;
+    }
+    header .logo img{
+        margin: 0;
+    }
+    .community_email_container {
+        width: 100%;
+    }
+    .community_email_container button{
+        width: 25%;
+    }
+
+}
+@media only screen and (max-width:768px){
+    .bodyContainer{
+        width: 100%;
+        overflow: hidden;
+    }
+    .banner_container{
+        height: 500px;
+        padding: 150px 0 0 120px ;
+    }
+    .banner_container h1{
+        font-size: 30px;
+    }
+    .shop_header .container_title, .earth_header .container_title, .fashion_header .container_title{
+        width: 60%;
+    }
+    .shop_header .container_header_btn, .earth_header .container_header_btn, .fashion_header .container_header_btn{
+        width: 40%;
+    }
+    .earth_cards{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .earth_card_left{
+        top: 0;
+    }
+    .earth_card2 .earth_card_inner .earth_card_left{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .earth_card2 .earth_card_inner .earth_card_right{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .clients{
+        width: 100%;
+        overflow: hidden;
+        grid-template-columns: repeat(5, 100px);
+    }
+    .mindful_cards{
+        grid-template-columns: 1fr 1fr;
+    }
+    .living_cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 300px);
+    }
+    .living_card3{
+        grid-column: 1/2;
+    }
+    .fashion_cards{
+        grid-template-columns: 1fr;
+        grid-template-rows:repeat(2,300px) ;
+        gap: 50px;
+    }
+    .community_container{
+        grid-template-columns: 1fr;
+    }
+
+}
+@media only screen and (max-width:480px){
+    
+    .bodyContainer{
+        width: 100%;
+        overflow: hidden;
+    }
+    .banner_container{
+        height: 300px;
+        padding: 120px 0 0 60px;
+    }
+    .banner_container h1{
+        font-size: 25px;
+    }
+    .shop,.earth,.mindful,.living,.fashion,.community{
+        padding: 50px 20px;
+    }
+    .shop_header,.earth_header,.fashion_header{
+        padding: 0 20px;
+        align-items: center;
+    }
+    .shop_header .container_title, .earth_header .container_title, .fashion_header .container_title{
+        width: 60%;
+        font-size: 25px;
+    }
+    .shop_header .container_header_btn, .earth_header .container_header_btn, .fashion_header .container_header_btn{
+        width: 40%;
+        padding: 0;
+    }
+    .shop_images{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .shop::before{
+        height: 150px;
+    }
+    .container_title::before{
+        left: -80px;
+    }
+    .container_header_btn a {
+        padding: 8px 15px;
+    }
+    .earth_cards{
+        padding-top: 30px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .earth_card_left{
+        top: 0;
+        padding: 30px;
+    }
+    .earth_img1{
+        width: 70%;
+    }
+    .earth_img2{
+        width: 45%;
+        padding: 30px;
+        right: 15px;
+        bottom: 0;
+    }
+    .earth_card_inner{
+        grid-template-columns: 1fr;
+    }
+    .earth_card2 .earth_card_inner .earth_card_left{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .earth_card2 .earth_card_inner .earth_card_right{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .earth_card2 .earth_img2{
+        width: 50%;
+        padding: 20px;
+        right: -10px;
+        bottom: 0px;
+    }
+    .clients{
+        width: 100%;
+        overflow: hidden;
+        grid-template-columns: repeat(5, 100px);
+    }
+    .mindful_cards{
+        grid-template-columns: 1fr;
+    }
+    .living_card3 h2, .living_card3 p,.living_card p{
+        width: 80%;
+    }
+    .community_container{
+        padding: 0 30px 50px 30px;
+        gap: 30px;
+    }
+    .living_card h2{
+        width: 80%;
+    }
+    .fashion_cards{
+        padding: 0 20px;
+    }
+    footer::before{
+        width: 60px;
+        height: 60px;
+        top: 0;
+    }
+    footer::after{
+        width: 60px;
+        height: 60px;
+        top: 0;
+    }
+    .footer_container1{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        padding: 0 ;
+        /* grid-template-areas: 
+        navigate navigate
+        navigate needhelp
+        social logo; */
+    }
+    .footer_container1 .navigate{
+        /* grid-area: navigate; */
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .footer_container1 .need_help{
+        /* grid-area: needhelp; */
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .footer_container1 .social{
+        /* grid-area: social; */
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .footer_container1 .footer_logo{
+        /* grid-area: logo; */
+        grid-column: 2/3;
+        padding: 10px;
+        grid-row: 3/4;
+    }
+    .footer_menu1{
+        width: 100%;
+    }
+    .footer_menu1 > ul{
+        width: 50%;
+    }
+    .footer_container2{
+        padding: 0;
+        flex-wrap: wrap;
+        gap: 10px 0;
+        justify-content: center;
+        padding-left: 30px;
+    }
+    .footer_container2 p{
+        width: 100%;
+    }
+    .footer_container2 p:nth-child(2){
+        width: 50%;
+    }
+    .footer_container2 div{
+        width: 50%;
+    }
+}
